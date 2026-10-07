@@ -1,0 +1,21 @@
+@host = https://localhost:7180
+
+GET {{host}}/api/health
+
+###
+GET {{host}}/api/customers
+
+###
+POST {{host}}/api/customers
+Content-Type: application/json
+
+{
+  "accountNumber": "TEST002",
+  "companyName": "XYZ Packaging",
+  "phone": "+27000000003",
+  "email": "info@xyz.test",
+  "assignedUserId": 2
+}
+
+###
+GET {{host}}/api/customers/1/contacts
